@@ -9,7 +9,7 @@ gem 'gbro_teemill'
 ```
 and then run `bundle install`
 
-or run:
+or install globally with
 ```bash
 gem install gbro_teemill
 ```
