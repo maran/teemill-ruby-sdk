@@ -1,6 +1,6 @@
 # Ruby SDK for the Teemill API
 
-## How to use
+## Installation
 
 To install, add this to your Gemfile
 
@@ -14,9 +14,9 @@ or run:
 gem install gbro_teemill
 ```
 
-### Example
+## Usage
 
-Create a custom product
+As an example, here is how you can create a custom product
 ```ruby
 require 'gbro_teemill'
 
@@ -26,8 +26,6 @@ Teemill.bearer_token = '...'
 # create a custom product
 custom_product = Teemill::CustomProduct.create({image_url: '...' })
 ```
-
-## Docs
 
 ### Authentication
 
