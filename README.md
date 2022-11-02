@@ -14,6 +14,21 @@ or run:
 gem install gbro_teemill
 ```
 
+### Example
+
+Create a custom product
+```ruby
+require 'gbro_teemill'
+
+# authenticate using bearer token method
+Teemill.bearer_token = '...'
+
+# create a custom product
+custom_product = Teemill::CustomProduct.create({image_url: '...' })
+```
+
+## Docs
+
 ### Authentication
 
 For most requests, all you need to provide is an API key
