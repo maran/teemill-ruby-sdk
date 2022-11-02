@@ -2,6 +2,18 @@
 
 ## How to use
 
+To install, add this to your Gemfile
+
+```bash
+gem 'gbro_teemill'
+```
+and then run `bundle install`
+
+or run:
+```bash
+gem install gbro_teemill
+```
+
 ### Authentication
 
 For most requests, all you need to provide is an API key
