@@ -2,7 +2,7 @@
 
 ## Installation
 
-To install, add this to your Gemfile
+To install with Bundler, add this to your Gemfile
 
 ```bash
 gem 'gbro_teemill'
