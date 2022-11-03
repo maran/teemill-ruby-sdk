@@ -3,7 +3,7 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-class BaseResource
+module RequestHandler
   def base_url
     "#{Teemill.api_base}/v#{Teemill.api_version}"
   end

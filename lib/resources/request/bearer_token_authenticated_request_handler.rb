@@ -1,6 +1,7 @@
-require_relative './base_resource'
+require_relative './request_handler'
 
-class BearerTokenAuthenticatedResource < BaseResource
+module BearerTokenAuthenticatedRequestHandler
+  include RequestHandler
   def authenticated_request_headers
     { Authorization: "Bearer #{Teemill.bearer_token}" }
   end
