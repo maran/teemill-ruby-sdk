@@ -1,3 +1,6 @@
+
+require_relative './errors/errors'
+require_relative './resources/request/requests'
 require_relative './resources/resources'
 require_relative './config'
 require 'forwardable'

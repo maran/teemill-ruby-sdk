@@ -1,23 +1,14 @@
-require_relative './request/bearer_token_authenticated_request_handler'
-require_relative './base_resource'
+# require_relative './request/bearer_token_authenticated_request_handler'
+
 
 module Teemill
-  class CustomProduct < BaseResource
-    include BearerTokenAuthenticatedRequestHandler
+  class CustomProduct < Teemill::BaseResource
+    include Teemill::BearerTokenAuthenticatedRequestHandler
 
     attr_accessor :id, :url, :image, :colours, :name, :price
 
-    def self.create(options)
-      obj = new
-
-      response = obj.send_post_request(
-        '/product/create',
-        options
-      )
-
-      obj.assign_properties(response)
-
-      obj
+    def create_resource_url
+      '/product/create'
     end
   end
 end
