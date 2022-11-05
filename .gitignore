@@ -1,3 +1,11 @@
 .vscode
-demo.rb
+vendor
+
+# gemfile.lock is not recommended to commit for gem files
+Gemfile.lock
+
+#ignore generated gem files
 *.gem
+
+#ignore test file
+demo.rb
