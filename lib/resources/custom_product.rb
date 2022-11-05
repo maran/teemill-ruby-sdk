@@ -2,6 +2,9 @@
 
 
 module Teemill
+  #
+  # Used to create Custom Products
+  #
   class CustomProduct < Teemill::BaseResource
     include Teemill::LegacyAuthenticatedRequestHandler
 

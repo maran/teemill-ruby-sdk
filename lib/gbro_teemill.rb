@@ -6,6 +6,9 @@ require_relative './config'
 require_relative './debug'
 require 'forwardable'
 
+#
+# An SDK for the Teemill API
+#
 module Teemill
   @config = Config.new
   @debug = Debug.new
