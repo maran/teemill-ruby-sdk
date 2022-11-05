@@ -13,12 +13,6 @@ module Teemill
       { Authorization: Teemill.api_key }
     end
 
-    def add_authentication_headers(request)
-      authenticated_request_headers.each_key do |header|
-        request[header] = authenticated_request_headers[header]
-      end
-    end
-
     def send_request(request_url, data, method = 'GET')
       url = URI("#{base_url}#{request_url}")
 
@@ -31,6 +25,16 @@ module Teemill
 
       JSON.parse(response.read_body)
     end
+
+    def send_post_request(request_url, data)
+      send_request(request_url, data, 'POST')
+    end
+
+    def send_get_request(request_url, data)
+      send_request(request_url, data, 'GET')
+    end
+
+    private
 
     def create_http(url)
       http = Net::HTTP.new(url.host, url.port)
@@ -52,12 +56,10 @@ module Teemill
       request
     end
 
-    def send_post_request(request_url, data)
-      send_request(request_url, data, 'POST')
-    end
-
-    def send_get_request(request_url, data)
-      send_request(request_url, data, 'GET')
+    def add_authentication_headers(request)
+      authenticated_request_headers.each_key do |header|
+        request[header] = authenticated_request_headers[header]
+      end
     end
   end
 end
