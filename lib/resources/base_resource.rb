@@ -2,10 +2,12 @@ require 'ostruct'
 
 module Teemill
   class BaseResource
-    include Teemill::RequestHandler
+    include Teemill::AuthenticatedRequestHandler
 
     def self.create(options)
       obj = new
+
+      Teemill::Debug.log("Creating: #{obj.class.name}", 'cyan')
 
       raise Teemill::InvalidRequestError, 'No create request exists for this resource' unless obj.create_resource_url
 

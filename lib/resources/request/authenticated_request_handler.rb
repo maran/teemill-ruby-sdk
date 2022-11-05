@@ -4,7 +4,7 @@ require 'net/http'
 require 'openssl'
 
 module Teemill
-  module RequestHandler
+  module AuthenticatedRequestHandler
     def base_url
       "#{Teemill.api_base}/v#{Teemill.api_version}"
     end
@@ -14,6 +14,8 @@ module Teemill
     end
 
     def send_request(request_url, data, method = 'GET')
+      check_credentials
+      Teemill::Debug.log("Dispatching: #{method} #{base_url}", 'yellow')
       url = URI("#{base_url}#{request_url}")
 
       http = create_http(url)
@@ -21,7 +23,8 @@ module Teemill
       request = create_request_object(url, data, method)
 
       response = http.request(request)
-      raise Teemill::NetworkError, "Error #{response.code}: #{response.msg}" unless response.code == "200"
+      Teemill::Debug.log("Received: #{response.code} #{response.msg}", 'yellow')
+      raise Teemill::InvalidResponseError, "Error #{response.code}: #{response.msg}" unless response.code == "200"
 
       JSON.parse(response.read_body)
     end
@@ -35,6 +38,10 @@ module Teemill
     end
 
     private
+
+    def check_credentials
+      raise Teemill::MissingCredentialsError unless Teemill.api_key
+    end
 
     def create_http(url)
       http = Net::HTTP.new(url.host, url.port)

@@ -3,7 +3,7 @@
 
 module Teemill
   class CustomProduct < Teemill::BaseResource
-    include Teemill::BearerTokenAuthenticatedRequestHandler
+    include Teemill::LegacyAuthenticatedRequestHandler
 
     attr_accessor :id, :url, :image, :colours, :name, :price
 
