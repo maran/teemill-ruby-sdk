@@ -1,6 +1,12 @@
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
+require 'simplecov'
+SimpleCov.start
+
+require 'simplecov-cobertura'
+SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+
 require 'minitest/autorun'
 require File.dirname(__FILE__) + '/../lib/gbro_teemill'
 
