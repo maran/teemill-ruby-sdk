@@ -4,6 +4,14 @@ module Teemill
   class BaseResource
     include Teemill::AuthenticatedRequestHandler
 
+    def create_resource_url
+      nil
+    end
+
+    def update_resource_url
+      nil
+    end
+
     def self.create(options)
       obj = new
 
@@ -13,6 +21,23 @@ module Teemill
 
       response = obj.send_post_request(
         obj.create_resource_url,
+        options
+      )
+
+      obj.assign_properties(response)
+
+      obj
+    end
+
+    def self.update(id, options)
+      obj = new
+
+      Teemill::Debug.log("Updating: #{obj.class.name}", 'green')
+
+      raise Teemill::InvalidRequestError, 'No create request exists for this resource' unless obj.update_resource_url
+
+      response = obj.send_post_request(
+        obj.update_resource_url,
         options
       )
 
