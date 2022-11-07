@@ -21,7 +21,7 @@ As an example, here is how you can create a custom product
 require 'gbro_teemill'
 
 # authenticate using bearer token method
-Teemill.bearer_token = '...'
+Teemill.legacy_api_key = '...'
 
 # create a custom product
 custom_product = Teemill::CustomProduct.create({image_url: '...' })
@@ -38,7 +38,7 @@ Teemill.api_key = '<your api key>'
 For some legacy requests you must instead provide a bearer token
 
 ```ruby
-Teemill.bearer_token = '<your bearer token api key>'
+Teemill.legacy_api_key = '<your bearer token api key>'
 ```
 
 ### Custom Products
