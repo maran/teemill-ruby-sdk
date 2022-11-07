@@ -35,7 +35,7 @@ For most requests, all you need to provide is an API key
 Teemill.api_key = '<your api key>'
 ```
 
-For some legacy requests you must instead provide a bearer token
+For some legacy requests you must instead provide a legacy API key
 
 ```ruby
 Teemill.legacy_api_key = '<your bearer token api key>'
