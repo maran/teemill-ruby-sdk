@@ -1,4 +1,5 @@
-![teemill-ruby-sdk Actions](https://api.meercode.io/badge/G-Bro/teemill-ruby-sdk?type=ci-success-rate&lastDay=14) [![CodeFactor](https://www.codefactor.io/repository/github/g-bro/teemill-ruby-sdk/badge)](https://www.codefactor.io/repository/github/g-bro/teemill-ruby-sdk)
+![teemill-ruby-sdk Actions](https://api.meercode.io/badge/G-Bro/teemill-ruby-sdk?type=ci-success-rate&lastDay=14)
+![CodeFactor](https://www.codefactor.io/repository/github/g-bro/teemill-ruby-sdk/badge)
 
 # Ruby SDK for the Teemill API
 
