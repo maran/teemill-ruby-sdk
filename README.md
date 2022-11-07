@@ -1,3 +1,5 @@
+![teemill-ruby-sdk Actions](https://api.meercode.io/badge/G-Bro/teemill-ruby-sdk?type=ci-success-rate&lastDay=14)
+
 # Ruby SDK for the Teemill API
 
 ## Installation
