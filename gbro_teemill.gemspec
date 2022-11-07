@@ -9,4 +9,9 @@ Gem::Specification.new do |s|
   s.metadata = {
     "source_code_uri" => "https://github.com/G-Bro/teemill-ruby-sdk"
   }
+
+  s.add_development_dependency 'rake', '~> 13.0'
+  s.add_development_dependency 'minitest', '~> 5.0'
+  s.add_development_dependency 'minitest-reporters'
+  s.add_development_dependency 'json', '~> 1.0'
 end
