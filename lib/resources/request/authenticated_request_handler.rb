@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'uri'
 require 'net/http'
@@ -24,7 +26,7 @@ module Teemill
 
       response = http.request(request)
       Teemill::Debug.log("Received: #{response.code} #{response.msg}", 'yellow')
-      raise Teemill::InvalidResponseError, "Error #{response.code}: #{response.msg}" unless response.code == "200"
+      raise Teemill::InvalidResponseError, "Error #{response.code}: #{response.msg}" unless response.code == '200'
 
       JSON.parse(response.read_body)
     end

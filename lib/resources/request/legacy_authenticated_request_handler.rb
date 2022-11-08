@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Teemill
   module LegacyAuthenticatedRequestHandler
     include Teemill::AuthenticatedRequestHandler
@@ -10,7 +12,7 @@ module Teemill
     end
 
     private
-    
+
     def check_credentials
       raise Teemill::MissingLegacyCredentialsError unless Teemill.legacy_api_key
     end
