@@ -1,5 +1,6 @@
-# require_relative './request/bearer_token_authenticated_request_handler'
+# frozen_string_literal: true
 
+# require_relative './request/bearer_token_authenticated_request_handler'
 
 module Teemill
   #

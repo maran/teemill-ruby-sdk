@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'colorize'
 
 module Teemill
@@ -7,7 +9,7 @@ module Teemill
     def self.log(string, color)
       return unless Teemill.debug_mode
 
-      STDERR.puts string.public_send(color)
+      warn string.public_send(color)
     end
   end
 end
