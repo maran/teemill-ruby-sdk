@@ -1,7 +1,7 @@
 ![GitHub action results](https://github.com/G-Bro/teemill-ruby-sdk/actions/workflows/ruby.yml/badge.svg)
 ![CodeFactor](https://www.codefactor.io/repository/github/g-bro/teemill-ruby-sdk/badge)
+![Gem version](https://img.shields.io/gem/v/gbro_teemill)
 ![Download count](https://img.shields.io/gem/dv/gbro_teemill/stable)
-![teemill-ruby-sdk Actions](https://api.meercode.io/badge/G-Bro/teemill-ruby-sdk?type=ci-success-rate&lastDay=14)
 
 # Ruby SDK for the Teemill API
 

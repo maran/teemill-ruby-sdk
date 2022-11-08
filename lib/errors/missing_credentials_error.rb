@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 require 'colorize'
 
 module Teemill
   class MissingCredentialsError < Teemill::DocumentedError
     def message
-      "No API key has been provided"
+      'No API key has been provided'
     end
 
     def docs_hash_mark
-      "#authentication"
+      '#authentication'
     end
   end
 end

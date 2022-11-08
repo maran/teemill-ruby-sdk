@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'ostruct'
 
 module Teemill
@@ -29,7 +31,7 @@ module Teemill
       obj
     end
 
-    def self.update(id, options)
+    def self.update(_id, options)
       obj = new
 
       Teemill::Debug.log("Updating: #{obj.class.name}", 'green')

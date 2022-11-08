@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 require_relative './errors/errors'
 require_relative './resources/request/requests'

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
@@ -8,7 +10,7 @@ require 'simplecov-cobertura'
 SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
 
 require 'minitest/autorun'
-require File.dirname(__FILE__) + '/../lib/gbro_teemill'
+require "#{File.dirname(__FILE__)}/../lib/gbro_teemill"
 
 class TestTeemill < Minitest::Test
   def test_api_key

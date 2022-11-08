@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/reporters'
 require 'spy'
 require 'uri'
@@ -8,7 +10,7 @@ require 'minitest/autorun'
 class TestBaseResource < Minitest::Test
   def test_send_post_request_routes_to_send_request
     base_resource = Teemill::BaseResource.new
-    spy = Spy.on(base_resource, :send_request).and_return({id: 1})
+    spy = Spy.on(base_resource, :send_request).and_return({ id: 1 })
 
     base_resource.send_post_request('test', {})
 
@@ -17,7 +19,7 @@ class TestBaseResource < Minitest::Test
 
   def test_send_get_request_routes_to_send_request
     base_resource = Teemill::BaseResource.new
-    spy = Spy.on(base_resource, :send_request).and_return({id: 1})
+    spy = Spy.on(base_resource, :send_request).and_return({ id: 1 })
 
     base_resource.send_get_request('test', {})
 
