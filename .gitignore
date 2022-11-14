@@ -1,8 +1,11 @@
 .vscode
 vendor
 
-#ignore generated gem files
+# ignore generated gem files
 *.gem
 
-#ignore test file
+# ignore test file
 demo.rb
+
+# ignore coverage results
+coverage
