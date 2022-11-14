@@ -1,9 +1,9 @@
 ![GitHub action results](https://github.com/G-Bro/teemill-ruby-sdk/actions/workflows/ruby.yml/badge.svg)
 ![GitHub lint results](https://github.com/G-Bro/teemill-ruby-sdk/actions/workflows/lint.yml/badge.svg)
 ![CodeFactor](https://www.codefactor.io/repository/github/g-bro/teemill-ruby-sdk/badge)
-![Gem version](https://img.shields.io/gem/v/gbro_teemill)
-![Download count](https://img.shields.io/gem/dv/gbro_teemill/stable)
-[![codecov](https://codecov.io/gh/G-Bro/teemill-ruby-sdk/branch/codecov-installation/graph/badge.svg?token=M55KY6XAIU)](https://codecov.io/gh/G-Bro/teemill-ruby-sdk)
+![Gem version](https://img.shields.io/gem/v/gbro_teemill?color=48c21a&logo=RubyGems)
+![Download count](https://img.shields.io/gem/dv/gbro_teemill/stable?logo=RubyGems)
+[![codecov](https://codecov.io/gh/G-Bro/teemill-ruby-sdk/branch/master/graph/badge.svg?token=M55KY6XAIU)](https://codecov.io/gh/G-Bro/teemill-ruby-sdk)
 
 # Ruby SDK for the Teemill API
 
