@@ -3,6 +3,7 @@
 ![CodeFactor](https://www.codefactor.io/repository/github/g-bro/teemill-ruby-sdk/badge)
 ![Gem version](https://img.shields.io/gem/v/gbro_teemill?color=48c21a&logo=RubyGems)
 ![Download count](https://img.shields.io/gem/dv/gbro_teemill/stable?logo=RubyGems)
+[![codecov](https://codecov.io/gh/G-Bro/teemill-ruby-sdk/branch/master/graph/badge.svg?token=M55KY6XAIU)](https://codecov.io/gh/G-Bro/teemill-ruby-sdk)
 
 # Ruby SDK for the Teemill API
 
