@@ -4,7 +4,9 @@ require 'minitest/reporters'
 Minitest::Reporters.use!
 
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter 'test'
+end
 
 require 'simplecov-cobertura'
 SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
