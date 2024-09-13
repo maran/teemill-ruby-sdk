@@ -49,6 +49,8 @@ module Teemill
       http = Net::HTTP.new(url.host, url.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      http.write_timeout = 90
+      http.read_timeout = 90
       http
     end
 
